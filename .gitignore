@@ -1,0 +1,7 @@
+# --- files ---
+.DS_Store
+
+# --- folder ---
+build/
+design/
+node_modules/

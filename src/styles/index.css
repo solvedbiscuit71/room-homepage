@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+:root {
+  --clr-black: hsl(0,0%,0%);
+  --clr-white: hsl(0,0%,100%);
+  --clr-gray: hsl(0,0%,63%);
+  --clr-darkgray: hsl(0, 0%, 27%);
+}
+
+:root {
+  font-family: "Spartan";
+  font-weight: 500;
+  font-size: 15px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
