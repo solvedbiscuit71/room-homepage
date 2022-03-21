@@ -11,7 +11,7 @@ function Slide(props) {
   }
 
   return (
-    <div className="slide" style={{backgroundImage: `url("images/slide/mobile-${slide}.jpg")`}}>
+    <div className="slide" style={{backgroundImage: `url("images/slide/${props.isDesktop ? "desktop" : "mobile"}-${slide}.jpg")`}}>
       {/* Note: the image will be set using background-image */}
 
       <div className="slide-btn">

@@ -3,8 +3,16 @@ import React, { useState } from 'react';
 function NavBar(props) {
   const [show, setShow] = useState(false);
 
+  const updateClasses = () => {
+    if (show === true && props.isDesktop === false) {
+      return "navbar navbar--show"
+    }else {
+      return "navbar"
+    }
+  }
+
   return (
-    <div className={`navbar ${show ? "navbar--show" : ""}`}>
+    <div className={updateClasses()}>
       <div className="toggle-navbar">
         <img onClick={() => setShow(true)} src="images/svg/hamburger.svg" alt="hamburger menu" />
         <img onClick={() => setShow(false)} src="images/svg/close.svg" alt="close menu" />

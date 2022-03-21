@@ -1,13 +1,24 @@
 import NavBar from "./components/NavBar";
 import Slide from "./components/Slide";
+import React, { useState, useEffect } from 'react';
 
 function App(props) {
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 1200px)").matches
+  )
+
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 1200px)")
+    .addEventListener('change', event => setMatches( event.matches ));
+  }, []);
+
   return (
     <>
-      <NavBar />
+      <NavBar isDesktop={matches} />
 
       <div className="main-grid">
-        <Slide />
+        <Slide isDesktop={matches} />
 
         <div className="intro">
           <h1>Discover innovative ways to decorate</h1>
@@ -20,7 +31,7 @@ function App(props) {
           </p>
           <div className="arrow-btn">
             <span>Shop now</span>
-            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg>
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fillRule="nonzero"/></svg>
           </div>
         </div>
 
