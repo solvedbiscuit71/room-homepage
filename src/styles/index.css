@@ -24,3 +24,59 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.nav {
+  display: none;
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+}
+.nav ul li {
+  font-weight: 600;
+}
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 3em 2em;
+}
+.navbar .toggle-navbar {
+  position: absolute;
+  top: 3em;
+  left: 2em;
+}
+.navbar .toggle-navbar img:first-child {
+  display: inline;
+}
+.navbar .toggle-navbar img:last-child {
+  display: none;
+}
+.navbar .logo {
+  display: inline;
+}
+
+.navbar.navbar--show {
+  position: fixed;
+  justify-content: flex-end;
+  background-color: white;
+}
+.navbar.navbar--show .toggle-navbar img:first-child {
+  display: none;
+}
+.navbar.navbar--show .toggle-navbar img:last-child {
+  display: inline;
+}
+.navbar.navbar--show .logo {
+  display: none;
+}
+.navbar.navbar--show .nav {
+  display: block;
+}

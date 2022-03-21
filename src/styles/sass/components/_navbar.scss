@@ -1,0 +1,69 @@
+@use "../abtracts";
+
+.nav {
+  display: none;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 1.5em;
+
+    li {
+      font-weight: 600;
+    }
+  }
+}
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  padding: 3em 2em;
+
+  .toggle-navbar {
+    position: absolute;
+    top: 3em;
+    left: 2em;
+  }
+
+  .toggle-navbar img:first-child {
+    display: inline;
+  }
+
+  .toggle-navbar img:last-child {
+    display: none;
+  }
+  
+  .logo {
+    display: inline;
+  }
+}
+
+.navbar.navbar--show {
+  position: fixed;
+
+  justify-content: flex-end;
+  background-color: white;
+
+  .toggle-navbar img:first-child {
+    display: none;
+  }
+
+  .toggle-navbar img:last-child {
+    display: inline;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+}

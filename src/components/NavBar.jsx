@@ -1,7 +1,7 @@
 function NavBar(props) {
   return (
     <div className="navbar">
-      <div className="show-navbar">
+      <div className="toggle-navbar">
         <img src="images/svg/hamburger.svg" alt="hamburger menu" />
         <img src="images/svg/close.svg" alt="close menu" />
       </div>
