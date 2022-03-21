@@ -13,12 +13,12 @@ function NavBar(props) {
       <img src="images/svg/logo.svg" alt="Room's logo" className="logo" />
 
       <div className="nav">
-        <ul>
-          <li>home</li>
-          <li>shop</li>
-          <li>about</li>
-          <li>contact</li>
-        </ul>
+        <div className="nav-list">
+          <div className="nav-element">home</div>
+          <div className="nav-element">shop</div>
+          <div className="nav-element">about</div>
+          <div className="nav-element">contact</div>
+        </div>
       </div>
     </div>
   );

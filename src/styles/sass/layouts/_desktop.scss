@@ -1,0 +1,138 @@
+@use "../abtracts";
+
+@media only screen and (min-width: 1200px) {
+  .main-grid {
+    width: 100vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr .35fr 1fr;
+    grid-template-rows: 1.8fr 1fr;
+    grid-template-areas:
+      "slide slide intro intro"
+      "dark about about light";
+  }
+
+  .navbar {
+    justify-content: flex-start;
+    background-color: transparent ;
+    padding: 4em;
+    gap: 3em;
+
+    .toggle-navbar {
+      display: none ;
+    }
+
+    .logo {
+      display: inline ;
+    }
+
+    .nav {
+      display: block ;
+      .nav-element {
+        position: relative;
+        color: white;
+      }
+
+      .nav-element::after {
+        content: "";
+        width: 50%;
+        height: 2px;
+        background-color: white;
+
+        position: absolute;
+        bottom: -12px;
+        left: 25%;
+
+        transform: scale(0);
+        transition-property: transform;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+      }
+
+      .nav-element:hover {
+        cursor: pointer;
+        &:hover::after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .slide {
+    grid-area: slide;
+
+    &-btn {
+      transform: translate(100%);
+      width: calc(100vw / 3 * .315);
+
+      div {
+        width: 50%;
+        height: 100%;
+        padding: 1.5em 2em;
+
+        display: grid;
+        place-content: center;
+      }
+
+      div:hover {
+        cursor: pointer;
+        background-color: var(--clr-darkgray);
+      }
+    }
+  }
+
+  .intro {
+    grid-area: intro;
+    padding: 6em;
+    padding-right: 5em;
+
+    h1 {
+      margin-top: 0;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: .8rem;
+      line-height: 1.5em;
+    }
+  }
+
+  .arrow-btn {
+    margin-top: 2em;
+  }
+
+  .arrow-btn:hover {
+    cursor: pointer;
+    span {
+      color: var(--clr-gray);
+    }
+
+    svg>path  {
+      fill: var(--clr-gray);
+    }
+  }
+
+  .about {
+    padding: 4em 3em;
+    p {
+      font-size: .76em;
+      line-height: 1.5em;
+    }
+  }
+
+  .illustration-dark {
+    grid-area: dark;
+    object-fit: cover;
+    align-self: stretch;
+  }
+
+  .illustration-light {
+    grid-area: light;
+    object-fit: cover;
+    align-self: stretch;
+  }
+
+  .about {
+    grid-area: about;
+  }
+}

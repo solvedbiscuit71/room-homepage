@@ -28,14 +28,11 @@ body {
 .nav {
   display: none;
 }
-.nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.nav-list {
   display: flex;
   gap: 1.5em;
 }
-.nav ul li {
+.nav-list .nav-element {
   font-weight: 600;
 }
 
@@ -128,11 +125,11 @@ body {
 }
 
 .illustration-dark {
-  width: 100vw;
+  width: 100%;
 }
 
 .illustration-light {
-  width: 100vw;
+  width: 100%;
 }
 
 .about {
@@ -146,4 +143,125 @@ body {
   font-size: 0.78rem;
   font-weight: 500;
   color: var(--clr-gray);
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-grid {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.35fr 1fr;
+    grid-template-rows: 1.8fr 1fr;
+    grid-template-areas: "slide slide intro intro" "dark about about light";
+  }
+
+  .navbar {
+    justify-content: flex-start;
+    background-color: transparent;
+    padding: 4em;
+    gap: 3em;
+  }
+  .navbar .toggle-navbar {
+    display: none;
+  }
+  .navbar .logo {
+    display: inline;
+  }
+  .navbar .nav {
+    display: block;
+  }
+  .navbar .nav .nav-element {
+    position: relative;
+    color: white;
+  }
+  .navbar .nav .nav-element::after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -12px;
+    left: 25%;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+  .navbar .nav .nav-element:hover {
+    cursor: pointer;
+  }
+  .navbar .nav .nav-element:hover:hover::after {
+    transform: scale(1);
+  }
+
+  .slide {
+    grid-area: slide;
+  }
+  .slide-btn {
+    transform: translate(100%);
+    width: 10.5vw;
+  }
+  .slide-btn div {
+    width: 50%;
+    height: 100%;
+    padding: 1.5em 2em;
+    display: grid;
+    place-content: center;
+  }
+  .slide-btn div:hover {
+    cursor: pointer;
+    background-color: var(--clr-darkgray);
+  }
+
+  .intro {
+    grid-area: intro;
+    padding: 6em;
+    padding-right: 5em;
+  }
+  .intro h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
+  .intro p {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+  }
+
+  .arrow-btn {
+    margin-top: 2em;
+  }
+
+  .arrow-btn:hover {
+    cursor: pointer;
+  }
+  .arrow-btn:hover span {
+    color: var(--clr-gray);
+  }
+  .arrow-btn:hover svg > path {
+    fill: var(--clr-gray);
+  }
+
+  .about {
+    padding: 4em 3em;
+  }
+  .about p {
+    font-size: 0.76em;
+    line-height: 1.5em;
+  }
+
+  .illustration-dark {
+    grid-area: dark;
+    object-fit: cover;
+    align-self: stretch;
+  }
+
+  .illustration-light {
+    grid-area: light;
+    object-fit: cover;
+    align-self: stretch;
+  }
+
+  .about {
+    grid-area: about;
+  }
 }
