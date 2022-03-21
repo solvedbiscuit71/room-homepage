@@ -1,0 +1,52 @@
+@use "../abtracts";
+
+.intro {
+  padding: 4em 2em;
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: .78rem;
+    font-weight: 500;
+    color: var(--clr-gray);
+  }
+}
+
+.arrow-btn {
+  margin-top: 3em;
+  display: flex;
+  gap: 2.5em;
+
+  span {
+    font-size: .95rem;
+    font-weight: 500;
+    color: var(--clr-darkgray);
+
+    text-transform: uppercase;
+    letter-spacing: .5em;
+  }
+}
+
+.illustration-dark {
+  width: 100vw;
+}
+
+.illustration-light {
+  width: 100vw;
+}
+
+.about {
+  padding: 4em 2em;
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+
+  p {
+    font-size: .78rem;
+    font-weight: 500;
+    color: var(--clr-gray);
+  }
+}

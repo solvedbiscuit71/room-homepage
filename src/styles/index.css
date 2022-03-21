@@ -100,3 +100,50 @@ body {
   padding: 0.95em 1.35em;
   background-color: black;
 }
+
+.intro {
+  padding: 4em 2em;
+}
+.intro h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.intro p {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--clr-gray);
+}
+
+.arrow-btn {
+  margin-top: 3em;
+  display: flex;
+  gap: 2.5em;
+}
+.arrow-btn span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--clr-darkgray);
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.illustration-dark {
+  width: 100vw;
+}
+
+.illustration-light {
+  width: 100vw;
+}
+
+.about {
+  padding: 4em 2em;
+}
+.about h2 {
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+.about p {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--clr-gray);
+}
