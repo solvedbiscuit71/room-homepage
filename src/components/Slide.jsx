@@ -3,10 +3,21 @@ import React, { useState } from 'react';
 function Slide(props) {
   const [slide,changeSlide] = useState(1)
   const handleClick = (operation) => {
-    if (operation === "+" && slide + 1 < 4) {
-      changeSlide(slide + 1)
-    }else if (operation === "-" && slide - 1 > 0) {
-      changeSlide(slide - 1)
+    switch (operation) {
+      case "+":
+        if (slide + 1 < 4) {
+          changeSlide(slide + 1)
+        }else {
+          changeSlide(1)
+        }
+        break;
+      case "-":
+        if (slide - 1 > 0) {
+          changeSlide(slide - 1)
+        }else {
+          changeSlide(3)
+        }
+        break;
     }
   }
 
