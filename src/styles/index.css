@@ -42,6 +42,7 @@ body {
 .navbar {
   width: 100%;
   position: absolute;
+  z-index: 6;
   top: 0;
   left: 0;
   display: flex;
@@ -79,4 +80,23 @@ body {
 }
 .navbar.navbar--show .nav {
   display: block;
+}
+
+.slide {
+  min-height: 360px;
+  background-image: url("../../public/images/slide/mobile-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.slide-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+.slide-btn div {
+  padding: 0.95em 1.35em;
+  background-color: black;
 }

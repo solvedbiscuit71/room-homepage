@@ -1,0 +1,25 @@
+@use "../abtracts";
+
+.slide {
+  min-height: 360px;
+
+  // Note: background image will change by javscript
+  background-image: url("../../public/images/slide/mobile-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+
+.slide-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+
+  div {
+    padding: .95em 1.35em;
+    background-color: black;
+  }
+}
