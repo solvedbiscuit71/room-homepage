@@ -166,6 +166,7 @@ body {
   }
   .navbar .logo {
     display: inline;
+    align-self: center;
   }
   .navbar .nav {
     display: block;
